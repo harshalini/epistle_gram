@@ -2,19 +2,19 @@ import { Response } from "miragejs";
 import { requiresAuth } from "../utils/authUtils";
 
 /**
- * All the routes related to Trash are present here.
+ * All the routes related to Trash  are present here.
  *  These are Privately accessible routes.
  * */
 
 /**
- * This handler handles gets all trashed notes in the db.
+ * This handler handles gets all trash notes in the db.
  * send GET Request at /api/trash
  * */
 
-export const getAllTrashNotesHandler = function (schema, request) {
+export const getAllTrashedNotesHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   if (!user) {
-    new Response(
+    return new Response(
       404,
       {},
       {
@@ -26,14 +26,14 @@ export const getAllTrashNotesHandler = function (schema, request) {
 };
 
 /**
- * This handler handles deletes note from trash.
+ * This handler handles deletes note from user notes.
  * send DELETE Request at /api/trash/delete/:noteId
  * */
 
 export const deleteFromTrashHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   if (!user) {
-    new Response(
+    return new Response(
       404,
       {},
       {
@@ -48,14 +48,14 @@ export const deleteFromTrashHandler = function (schema, request) {
 };
 
 /**
- * This handler handles restoring the trashed notes to user notes.
+ * This handler handles restoring the trash notes to user notes.
  * send POST Request at /api/trash/restore/:noteId
  * */
 
 export const restoreFromTrashHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   if (!user) {
-    new Response(
+    return new Response(
       404,
       {},
       {

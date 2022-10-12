@@ -1,0 +1,338 @@
+:root {
+    --cadetBlue: cadetblue;
+    --chocolate: chocolate;
+    --darkmagenta: darkmagenta;
+    --palevioletred: palevioletred;
+    --brown: brown;
+    --goldenrod: goldenrod;
+    --seagreen: seagreen;
+}
+
+.flex-div {
+    display: flex;
+}
+
+.lib-sidebar {
+    background-color: var(--navbar-color);
+    width: 15rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding-top: 6rem;
+    position: fixed;
+}
+
+.lib-sidebar li {
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+}
+
+.lib-sidebar li:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.lib-sidebar a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.sidebar-icon {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.lib-sidebar li span {
+    justify-self: flex-start;
+    margin-left: 1.5rem;
+}
+
+.note-form {
+    margin: 8rem 0 0 18rem;
+    width: 25rem;
+    background-color: var(--navbar-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.note-ip {
+    font-size: 1.1rem;
+    background-color: var(--navbar-color);
+    box-shadow: 0px 0px 5px 5px var(--secondary-color);
+    color: var(--white);
+}
+
+.content-input {
+    height: 5rem;
+    margin-top: 0rem;
+    background-color: var(--navbar-color);
+    font-size: 1.1rem;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    margin-left: 10.5rem;
+    margin-top: -2rem;
+    position: absolute;
+}
+
+.add-btn i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.add-btn i:hover {
+    color: var(--secondary-color);
+}
+
+.note-heading {
+    display: flex;
+    justify-items: flex-start;
+    margin: 2rem 0 0 18rem;
+}
+
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21.5rem, 1fr));
+    gap: 2rem;
+    margin: 2rem 2rem 2rem 18rem;
+}
+
+.added-note {
+    width: 22rem;
+    background-color: var(--navbar-color);
+    height: max-content;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px 5px var(--primary-color);
+}
+
+.color-defaultColor {
+    background-color: var(--navbar-color);
+}
+
+.color-cadetblue {
+    background-color: var(--cadetBlue);
+}
+
+.color-chocolate {
+    background-color: var(--chocolate);
+}
+
+.color-darkmagenta {
+    background-color: var(--darkmagenta);
+}
+
+.color-palevioletred {
+    background-color: var(--palevioletred);
+}
+
+.color-brown {
+    background-color: var(--brown);
+}
+
+.color-goldenrod {
+    background-color: var(--goldenrod);
+}
+
+.color-seagreen {
+    background-color: var(--seagreen);
+}
+
+.title-div {
+    display: flex;
+    justify-items: flex-start;
+    margin-left: 1rem;
+   
+}
+
+.content-div {
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+
+.note-content {
+    height: max-content;
+    overflow-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+}
+
+.note-actions {
+    margin-bottom: 0.5rem;
+}
+
+.note-actions button, .note-btn {
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    margin: 0 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.note-actions button:hover {
+    background: radial-gradient(#fff, var(--secondary-color));
+    color: var(--black);
+}
+
+.archive-div {
+    margin-top: 8rem;
+}
+
+/* NOTE FEATURES */
+.feature-btns {
+    margin-left: -4rem;
+}
+
+.feature-btns button {
+    margin-right: 3.5rem;
+}
+
+.note-feature {
+    margin-top: -2rem;
+    position: absolute;
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+.color-palette {
+    margin-left: 26rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 6rem;
+    padding: 0.5rem;
+}
+
+.note-color {
+    border-radius: 50%;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0.1rem;
+    cursor: pointer;
+}
+
+.label-div {
+    margin-left: 19rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-div input {
+    width: 3.5rem;
+    height: 0.2rem;
+    padding: 0.7rem;
+}
+
+.label-div button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-weight: 700;
+    margin-top: -0.3rem;
+    padding: 0.2rem 0;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.label-and-priority {
+    display: flex;
+    margin-bottom: 0rem;
+}
+
+.note-flex {
+    color: var(--black);
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    width: 5rem;
+}
+
+.added-label {
+    background: radial-gradient(#fff, var(--secondary-color));
+}
+
+.priority-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -2rem 0 0.2rem 34rem;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.priority-div label {
+    /*margin-left: -9rem;*/
+    margin-left: 0rem;
+}
+
+.priority-div input {
+    
+}
+
+.added-priority {
+    background: radial-gradient(#fff, var(--primary-color));
+}
+
+.pin-button {
+    background: none;
+    border: none;
+    margin-left: 20rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pinned {
+    color: var(--primary-color)
+}
+.unpinned {
+    color: var(--white)
+}
+.mg-top {
+    margin-top: 0.5rem;
+    position: absolute;
+    margin-left: 9rem;
+}
+.update-btn {
+    background-color: var(--primary-color);
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: -3rem;
+    margin-top: -0rem;
+    padding: 0.5rem;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.date-div {
+   display: flex;
+   width: 20rem;
+   justify-content: space-between;
+   margin: auto;
+   font-weight: 500;
+}
+.cancel-btn-div {
+   position: absolute;
+   margin-top: -2.5rem;
+}
+.cancel-btn {
+   height: 2.5rem;
+   width: 2.5rem;
+   border-radius: 50%;
+   background-color: var(--navbar-color);
+   border: solid 2px var(--secondary-color);
+   cursor: pointer;
+   
+}
+.cancel-btn i {
+    color: var(--secondary-color);
+}

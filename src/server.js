@@ -3,7 +3,13 @@ import {
   deleteFromArchivesHandler,
   getAllArchivedNotesHandler,
   restoreFromArchivesHandler,
+  moveArchiveToTrashHandler
 } from "./backend/controllers/ArchiveController";
+import {
+  deleteFromTrashHandler,
+  getAllTrashedNotesHandler,
+  restoreFromTrashHandler
+} from "./backend/controllers/TrashController"
 import {
   loginHandler,
   signupHandler,
@@ -13,14 +19,9 @@ import {
   createNoteHandler,
   deleteNoteHandler,
   getAllNotesHandler,
-  trashNoteHandler,
   updateNoteHandler,
+  TrashNoteHandler
 } from "./backend/controllers/NotesController";
-import {
-  deleteFromTrashHandler,
-  getAllTrashNotesHandler,
-  restoreFromTrashHandler,
-} from "./backend/controllers/TrashController";
 import { users } from "./backend/db/users";
 
 export function makeServer({ environment = "development" } = {}) {
@@ -59,7 +60,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.post("/notes/:noteId", updateNoteHandler.bind(this));
       this.delete("/notes/:noteId", deleteNoteHandler.bind(this));
       this.post("/notes/archives/:noteId", archiveNoteHandler.bind(this));
-      this.post("/notes/trash/:noteId", trashNoteHandler.bind(this));
+      this.post("/notes/trash/:noteId", TrashNoteHandler.bind(this));
 
       // archive routes (private)
       this.get("/archives", getAllArchivedNotesHandler.bind(this));
@@ -71,10 +72,19 @@ export function makeServer({ environment = "development" } = {}) {
         "/archives/delete/:noteId",
         deleteFromArchivesHandler.bind(this)
       );
-      // trash routes (private)
-      this.get("/trash", getAllTrashNotesHandler.bind(this));
-      this.post("/trash/restore/:noteId", restoreFromTrashHandler.bind(this));
-      this.delete("/trash/delete/:noteId", deleteFromTrashHandler.bind(this));
+      this.post(
+        "/archives/trash/:noteId",
+        moveArchiveToTrashHandler.bind(this)
+      );
+
+      //trash routes (private)
+      this.get("/trash", getAllTrashedNotesHandler.bind(this));
+      this.post("/trash/restore/:noteId",
+        restoreFromTrashHandler.bind(this)
+      );
+      this.delete("/trash/delete/:noteId",
+        deleteFromTrashHandler.bind(this)
+      );
     },
   });
   return server;
