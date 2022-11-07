@@ -1,0 +1,142 @@
+@import url(./home.css);
+
+:root {
+    --light-gray: #ccc;
+}
+
+.account-page {
+    padding: 3rem 0;
+    background: radial-gradient(var(--primary-color), var(--background-color));
+}
+
+.nav-pages .account-link {
+    color: var(--orange);
+    border-bottom: dotted 2px var(--primary-color);
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: var(--secondary-color);
+    width: 22rem;
+    height: 25rem;
+    position: relative;
+    text-align: center;
+    padding: 1.25rem 0;
+    margin: auto;
+    box-shadow: var(--box-shadow);
+    border: solid 3px var(--white);
+    margin-top: 8rem;
+}
+
+.form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: var(--footer-gray);
+    cursor: pointer;
+    width: 6.25rem;
+    font-size: 1.5rem;
+}
+
+.form-container form {
+    max-width: 22rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: 6.25rem;
+}
+
+form input {
+    width: 90%;
+    height: 2rem;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: solid 1px var(--light-gray);
+}
+
+form input:focus {
+    outline: none;
+    border: solid 1px var(--footer-gray);
+}
+
+form .account-btn {
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    height: 2.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: solid 5px var(--primary-color);
+}
+
+.account-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.account-btn:focus {
+    outline: none;
+}
+
+.fr-pswd {
+    font-size: 12px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.form-btn {
+    display: none;
+}
+
+.form-container label {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.pswd-rem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+
+#check {
+    width: 1rem;
+    height: 1rem;
+}
+
+#remember-check {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.acc-link {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .signUp-offer, .form-container {
+        width: 18rem;
+    }
+
+    .account-container {
+        margin-top: 5rem;
+    }
+}

@@ -169,17 +169,11 @@ export const archiveNoteHandler = function (schema, request) {
   }
 };
 
-/**
- * This handler handles trashing a note
- * send POST Request at /api/notes/trash/:noteId
- * body contains {note}
- * */
-
-export const trashNoteHandler = function (schema, request) {
+export const TrashNoteHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   try {
     if (!user) {
-      new Response(
+      return new Response(
         404,
         {},
         {
@@ -192,7 +186,11 @@ export const trashNoteHandler = function (schema, request) {
     user.notes = user.notes.filter((note) => note._id !== noteId);
     user.trash.push({ ...trashedNote });
     this.db.users.update({ _id: user._id }, user);
-    return new Response(201, {}, { trash: user.trash, notes: user.notes });
+    return new Response(
+      201,
+      {},
+      { trash: user.trash, notes: user.notes }
+    );
   } catch (error) {
     return new Response(
       500,

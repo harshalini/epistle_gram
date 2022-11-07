@@ -1,8 +1,9 @@
+@import url("https://unpkg.com/mockman-js@latest/dist/style.css");
+@import url("https://liniui.netlify.app/component.css");
+@import url(./styles/appStyles.css);
+@import url("https://use.fontawesome.com/releases/v6.1.1/css/all.css");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
