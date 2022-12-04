@@ -336,3 +336,12 @@
 .cancel-btn i {
     color: var(--secondary-color);
 }
+
+.highlight-ip {
+    border-radius: 50%; 
+    height: 25px; 
+    width: 25px; 
+    background-color: black; 
+    color: white;
+    border: none;
+}
